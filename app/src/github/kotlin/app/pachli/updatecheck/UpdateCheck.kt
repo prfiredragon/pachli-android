@@ -29,7 +29,7 @@ class UpdateCheck @Inject constructor(
     private val versionCodeExtractor = """(\d+)\.apk""".toRegex()
 
     override val updateIntent = Intent(Intent.ACTION_VIEW).apply {
-        data = Uri.parse("https://www.github.com/pachli/pachli-android/releases/latest")
+        data = Uri.parse("https://www.github.com/prfiredragon/pachli-android/releases/latest")
     }
 
     override suspend fun remoteFetchLatestVersionCode(): Int? {
