@@ -32,8 +32,8 @@ android {
 
     defaultConfig {
         applicationId = "app.pachli"
-        versionCode = 25
-        versionName = "2.8.5"
+        versionCode = 26
+        versionName = "2.8.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments["disableAnalytics"] = "true"
