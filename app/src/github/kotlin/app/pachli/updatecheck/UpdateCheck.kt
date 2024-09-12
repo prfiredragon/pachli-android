@@ -33,7 +33,7 @@ class UpdateCheck @Inject constructor(
     }
 
     override suspend fun remoteFetchLatestVersionCode(): Int? {
-        val release = gitHubService.getLatestRelease("pachli", "pachli-android").getOrNull() ?: return null
+        val release = gitHubService.getLatestRelease("prfiredragon", "pachli-android").getOrNull() ?: return null
         for (asset in release.assets) {
             if (asset.contentType != "application/vnd.android.package-archive") continue
             return versionCodeExtractor.find(asset.name)?.groups?.get(1)?.value?.toIntOrNull() ?: continue
