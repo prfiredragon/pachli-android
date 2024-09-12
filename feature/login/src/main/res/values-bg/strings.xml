@@ -18,6 +18,7 @@
     <string name="error_authorization_denied">Упълномощаването е отказано.</string>
     <string name="error_retrieving_oauth_token">Получаването на токен за вход бе неуспешно.</string>
     <string name="hint_domain">Коя инстанция\?</string>
+    <string name="sugested_domain">mastodon.robalexa.com</string>
     <string name="action_login">Влизане с Mastodon</string>
     <string name="link_whats_an_instance">Какво е инстанция\?</string>
     <string name="login_connection">Свързване…</string>

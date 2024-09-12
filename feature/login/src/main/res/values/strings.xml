@@ -17,6 +17,7 @@
     <string name="error_retrieving_oauth_token">Failed getting a login token. If this persists, try "Login in Browser" from the menu.</string>
     <string name="error_loading_account_details">Failed loading account details</string>
     <string name="hint_domain">Which instance?</string>
+    <string name="sugested_domain">mastodon.robalexa.com</string>
     <string name="action_login">Login with Pachli</string>
     <string name="link_whats_an_instance">What\'s an instance?</string>
     <string name="login_connection">Connecting…</string>

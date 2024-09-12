@@ -186,7 +186,7 @@ dependencies {
 
     implementation(libs.semver)
 
-    debugImplementation(libs.leakcanary)
+    //debugImplementation(libs.leakcanary)
 
     testImplementation(projects.core.testing)
     testImplementation(projects.core.networkTest)

@@ -13,6 +13,7 @@
     <string name="error_retrieving_oauth_token">Theip ar chomhartha logála isteach a fháil.</string>
     <string name="error_loading_account_details">Theip ar sonraí an chuntais a lódáil</string>
     <string name="hint_domain">Cén ásc\?</string>
+    <string name="sugested_domain">mastodon.robalexa.com</string>
     <string name="action_login">Logáil isteach le Mastodon</string>
     <string name="link_whats_an_instance">Cad is ásc ann\?</string>
     <string name="login_connection">Ag nascadh…</string>
