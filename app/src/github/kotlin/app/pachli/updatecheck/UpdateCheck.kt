@@ -27,18 +27,24 @@ class UpdateCheck @Inject constructor(
     private val gitHubService: GitHubService,
 ) : UpdateCheckBase(sharedPreferencesRepository) {
     private val versionCodeExtractor = """(\d+)\.apk""".toRegex()
+    private val download_url ""
 
-    override val updateIntent = Intent(Intent.ACTION_VIEW).apply {
-        data = Uri.parse("https://www.github.com/prfiredragon/pachli-android/releases/latest")
-    }
+    //override val updateIntent = Intent(Intent.ACTION_VIEW).apply {
+    //    data = Uri.parse("https://www.github.com/prfiredragon/pachli-android/releases/latest")
+    //}
 
     override suspend fun remoteFetchLatestVersionCode(): Int? {
         val release = gitHubService.getLatestRelease("prfiredragon", "pachli-android").getOrNull() ?: return null
         for (asset in release.assets) {
             if (asset.contentType != "application/vnd.android.package-archive") continue
+            download_url = "https://www.github.com/prfiredragon/pachli-android/releases/latest/download/" + asset.name
             return versionCodeExtractor.find(asset.name)?.groups?.get(1)?.value?.toIntOrNull() ?: continue
         }
 
         return null
+    }
+
+    override val updateIntent = Intent(Intent.ACTION_VIEW).apply {
+        data = Uri.parse(download_url)
     }
 }
